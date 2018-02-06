@@ -1,6 +1,0 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-@import '~font-awesome/css/font-awesome.css';
-body, html {
-  font-family: Roboto, Arial, sans-serif;
-  margin: 0 auto;
-}

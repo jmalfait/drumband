@@ -1,0 +1,41 @@
+{
+  "configVersion": 1,
+  "index": "https://faitie.github.io/drumband/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://faitie.github.io/drumband/favicon.ico",
+        "https://faitie.github.io/drumband/index.html",
+        "https://faitie.github.io/drumband/inline.bb4af123d6dba4e42208.bundle.js",
+        "https://faitie.github.io/drumband/main.86262252788f6c2f53be.bundle.js",
+        "https://faitie.github.io/drumband/polyfills.16286cde992a53adbc8d.bundle.js",
+        "https://faitie.github.io/drumband/scripts.76d47550469c8c7be4cd.bundle.js",
+        "https://faitie.github.io/drumband/styles.1b3ed22b1d5b16af8edf.bundle.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://faitie.github.io/drumband/assets/boekje.pdf"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://faitie.github.io/drumband/inline.bb4af123d6dba4e42208.bundle.js": "b099640d86ddc9ef18533baaa8c8557490eae488",
+    "https://faitie.github.io/drumband/assets/boekje.pdf": "dd866dfe0369a8da2556bef03002e074a8181188",
+    "https://faitie.github.io/drumband/main.86262252788f6c2f53be.bundle.js": "72c1c562f7796b5717ad142c9da2bcb4900ea3f9",
+    "https://faitie.github.io/drumband/polyfills.16286cde992a53adbc8d.bundle.js": "c7b365ef47db91a7d672881b233f740827cbc545",
+    "https://faitie.github.io/drumband/scripts.76d47550469c8c7be4cd.bundle.js": "447527590928fb8f51cbc0b26270051e94c8aaf2",
+    "https://faitie.github.io/drumband/styles.1b3ed22b1d5b16af8edf.bundle.css": "489415c02cdfb68a104c54d45fed76c5558fb2e8",
+    "https://faitie.github.io/drumband/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://faitie.github.io/drumband/index.html": "f0e7f231b003f1cdf1a2fe08f749ce864898cdf1"
+  }
+}
