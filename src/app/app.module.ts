@@ -54,6 +54,7 @@ import { RoutingModule } from './routing.module';
 
 import { CalendarComponent } from './calendar/calendar.component';
 import { CalendarService } from './calendar/calendar.service';
+import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './loader/loader.service';
 import { ScoreOverviewComponent } from './scores/overview/overview.component';
 import { ScoreDetailComponent } from './scores/detail/detail.component';
@@ -102,6 +103,7 @@ export class MaterialModule {}
 @NgModule({
   declarations: [
     AppComponent,
+    LoaderComponent,
     ScoreOverviewComponent,
     ScoreDetailComponent,
     CalendarComponent
