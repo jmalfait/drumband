@@ -1,5 +1,8 @@
 <mat-toolbar class="mat-elevation-z6">
-  <span [routerLink]="['/']">app</span>
+  <div class="titlecontainer" [routerLink]="['/']">
+      <span class="title">Drumband</span>
+      <span class="subtitle">Padvinders van Sint-Joris</span>
+  </div>
   <span class="example-fill-remaining-space"></span>
   <button mat-button [routerLink]="['/calendar']">Optredens</button>
   <button mat-button [routerLink]="['/scores']">Liedjes</button>

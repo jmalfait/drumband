@@ -16,3 +16,26 @@
 .sidenav-content::-webkit-scrollbar {
   display: none;
 }
+
+mat-toolbar {
+  background-color: #3e78b2;
+}
+
+mat-toolbar > button:hover {
+  background-color: #1439cd;
+}
+
+.title {
+  color: #f5ce33;
+  float: left;
+  clear: left;
+  font-size: large;
+}
+
+.subtitle {
+  color: #f5ce33;
+  float: left;
+  clear: left;
+  padding-left: 15px;
+  font-size: small;
+}

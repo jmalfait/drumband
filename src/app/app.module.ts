@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -51,6 +51,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 import { RoutingModule } from './routing.module';
+import { GoogleAnalyticsEventsService } from './core/google-analytics-events.service';
 
 import { CalendarComponent } from './calendar/calendar.component';
 import { CalendarService } from './calendar/calendar.service';
@@ -98,7 +99,7 @@ import { environment } from '../environments/environment';
     MatTooltipModule,
   ]
 })
-export class MaterialModule {}
+export class MaterialModule { }
 
 @NgModule({
   declarations: [
@@ -128,9 +129,10 @@ export class MaterialModule {}
     useClass: AppHttpInterceptor,
     multi: true
   },
-  CalendarService,
-  LoaderService,
-  ScoresService],
+    GoogleAnalyticsEventsService,
+    CalendarService,
+    LoaderService,
+    ScoresService],
   bootstrap: [AppComponent]
 })
 
