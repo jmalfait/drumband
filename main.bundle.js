@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container fullscreen>\n  <mat-sidenav #sidenav>\n    <mat-nav-list>\n      <a mat-list-item [routerLink]=\"['/calendar']\">\n        <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-calendar\"></mat-icon>\n      </a>\n\n      <a mat-list-item [routerLink]=\"['/scores']\">\n        <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-music\"></mat-icon>\n      </a>\n\n      <a mat-list-item [routerLink]=\"['/contact']\">\n        <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-user\"></mat-icon>\n      </a>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-toolbar class=\"mat-elevation-z6\">\n    <div class=\"titlecontainer\" fxShow=\"false\" fxShow.gt-sm>\n      <img src=\"../assets/logo.png\" alt=\"logo\" class=\"logo\" />\n    </div>\n    <div class=\"titlecontainer\" (click)=\"sidenav.open()\" fxHide=\"false\" fxHide.gt-sm>\n      <img src=\"../assets/logo.png\" alt=\"logo\" class=\"logo\" />\n    </div>\n    <span class=\"blank-grow\"></span>\n    <div fxLayout=\"row\" fxShow=\"false\" fxShow.gt-sm>\n      <button mat-button [routerLink]=\"['/calendar']\">Optredens <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-calendar\"></mat-icon></button>\n      <button mat-button [routerLink]=\"['/scores']\">Liedjes <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-music\"></mat-icon></button>\n      <button mat-button [routerLink]=\"['/contact']\">Contact <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-user\"></mat-icon></button>\n    </div>\n  </mat-toolbar>\n</mat-sidenav-container>\n\n<div class=\"sidenav-content\">\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<mat-sidenav-container fullscreen>\n  <mat-sidenav #sidenav>\n    <mat-nav-list>\n      <a mat-list-item [routerLink]=\"['/calendar']\">\n        <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-calendar\"></mat-icon>\n      </a>\n\n      <a mat-list-item [routerLink]=\"['/scores']\">\n        <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-music\"></mat-icon>\n      </a>\n\n      <a mat-list-item [routerLink]=\"['/contact']\">\n        <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-user\"></mat-icon>\n      </a>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-toolbar class=\"mat-elevation-z6\">\n    <div class=\"titlecontainer\" fxShow=\"false\" fxShow.gt-sm>\n      <img src=\"../assets/logo.png\" alt=\"logo\" class=\"logo\" />\n    </div>\n    <div class=\"titlecontainer\" (click)=\"sidenav.open()\" fxHide=\"false\" fxHide.gt-sm>\n      <img src=\"../assets/logo.png\" alt=\"logo\" class=\"logo\" />\n    </div>\n    <span class=\"blank-grow\"></span>\n    <div fxLayout=\"row\" fxShow=\"false\" fxShow.gt-sm>\n      <button mat-button [routerLink]=\"['/calendar']\">Optredens <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-calendar\"></mat-icon></button>\n      <button mat-button [routerLink]=\"['/scores']\">Liedjes <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-music\"></mat-icon></button>\n      <button mat-button [routerLink]=\"['/contact']\">Contact <mat-icon fontSet=\"fontawesome\" fontIcon=\"fa-user\"></mat-icon></button>\n    </div>\n  </mat-toolbar>\n  \n  <div class=\"sidenav-content\">\n    <router-outlet></router-outlet>\n  </div>\n</mat-sidenav-container>\n\n\n"
 
 /***/ }),
 
@@ -50,8 +50,6 @@ module.exports = "<mat-sidenav-container fullscreen>\n  <mat-sidenav #sidenav>\n
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_google_analytics_events_service__ = __webpack_require__("./src/app/core/google-analytics-events.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,7 +59,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -77,15 +74,6 @@ var AppComponent = /** @class */ (function () {
         });
     }
     AppComponent.prototype.ngAfterViewInit = function () {
-        __WEBPACK_IMPORTED_MODULE_3_jquery__('#header__icon').click(function (e) {
-            debugger;
-            e.preventDefault();
-            __WEBPACK_IMPORTED_MODULE_3_jquery__('body').toggleClass('with--sidebar');
-        });
-        __WEBPACK_IMPORTED_MODULE_3_jquery__('#site-cache').click(function (e) {
-            debugger;
-            __WEBPACK_IMPORTED_MODULE_3_jquery__('body').removeClass('with--sidebar');
-        });
     };
     AppComponent.prototype.ngOnDestroy = function () {
     };
@@ -1105,14 +1093,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_dynamic__ = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app_module__ = __webpack_require__("./src/app/app.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_hammerjs__ = __webpack_require__("./node_modules/hammerjs/hammer.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_hammerjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_font_awesome_css_font_awesome_css__ = __webpack_require__("./node_modules/font-awesome/css/font-awesome.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_font_awesome_css_font_awesome_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_font_awesome_css_font_awesome_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_font_awesome_css_font_awesome_css__ = __webpack_require__("./node_modules/font-awesome/css/font-awesome.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_font_awesome_css_font_awesome_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_font_awesome_css_font_awesome_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_hammerjs__ = __webpack_require__("./node_modules/hammerjs/hammer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_hammerjs__);
 
 
 __WEBPACK_IMPORTED_MODULE_1__angular_common__["m" /* registerLocaleData */](__WEBPACK_IMPORTED_MODULE_0__angular_common_locales_nl_be__["a" /* default */]);
-
 
 
 
@@ -1129,6 +1116,7 @@ Object(__WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_dynamic__["a" /* pl
     window['ngRef'] = ref;
     // Otherise, log the boot error
 }).catch(function (err) { return console.error(err); });
+
 
 
 /***/ }),
