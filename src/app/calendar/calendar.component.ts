@@ -12,14 +12,15 @@ export class CalendarComponent implements OnInit {
     calendar: CalendarEvents;
 
     constructor(private calenderService: CalendarService, public googleAnalyticsEventsService: GoogleAnalyticsEventsService) {
-        this.calendar = new CalendarEvents();
+        // this.calendar = new CalendarEvents();
     }
 
     ngOnInit() {
         this.googleAnalyticsEventsService.emitEvent('calendar', 'init', '', 0);
-        this.calenderService.getCalendarEvent().subscribe(
-            (res: CalendarEvents) => {
-                this.calendar = res;
-        });
+        // this.calenderService.getCalendarEvent().subscribe(
+        //     (res: CalendarEvents) => {
+        //         debugger;
+        //         this.calendar = res;
+        // });
     }
 }

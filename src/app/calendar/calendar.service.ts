@@ -11,7 +11,7 @@ export class CalendarService {
     private url: string;
 
     constructor(private http: HttpClient) {
-        this.url = 'https://www.googleapis.com/calendar/v3/calendars/' + environment.calendarId + '/events?key=' + environment.calendarApiKey; 
+        this.url = `https://www.googleapis.com/calendar/v3/calendars/${environment.calendarId}/events?key=${environment.calendarApiKey}`;
     }
 
     getCalendarEvent() {
@@ -46,13 +46,15 @@ export class CalendarService {
                     i.iCalUID = item.iCalUID;
                     i.sequence = item.sequence;
 
-                    for (const a of item.attachments) {
-                        const attachment = new Attachment();
-                        attachment.fileUrl = this.buildPublicUrlFromCalendatAttachmentFile(a.fileUrl);
-                        attachment.title = a.title;
-                        attachment.iconLink = a.iconLink;
-                        attachment.fileId = a.fileId;
-                        i.attachments.push(attachment);
+                    if (item.attachments) {
+                        for (const a of item.attachments) {
+                            const attachment = new Attachment();
+                            attachment.fileUrl = this.buildPublicUrlFromCalendatAttachmentFile(a.fileUrl);
+                            attachment.title = a.title;
+                            attachment.iconLink = a.iconLink;
+                            attachment.fileId = a.fileId;
+                            i.attachments.push(attachment);
+                        }
                     }
 
                     events.items.push(i);

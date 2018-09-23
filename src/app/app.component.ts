@@ -1,6 +1,7 @@
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, AfterViewInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { GoogleAnalyticsEventsService } from './core/google-analytics-events.service';
+import * as $ from 'jquery';
 
 declare const ga: any;
 
@@ -9,7 +10,7 @@ declare const ga: any;
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css']
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent implements OnDestroy, AfterViewInit {
 
   constructor(public router: Router, public googleAnalyticsEventsService: GoogleAnalyticsEventsService) {
     this.router.events.subscribe(event => {
@@ -18,6 +19,9 @@ export class AppComponent implements OnDestroy {
         ga('send', 'pageview');
       }
     });
+  }
+
+  ngAfterViewInit() {
   }
 
   ngOnDestroy(): void {

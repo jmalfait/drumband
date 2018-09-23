@@ -1,9 +1,9 @@
-.example-card {
-    width: 400px;
-    margin: 10px auto;
-  }
   
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('http://www.padvindersvansintjorisizegem.be/sites/default/files/styles/blog/public/scouts.JPG');
     background-size: cover;
+  }
+
+  .wrapper {
+    margin: 10px auto;
   }

@@ -1,6 +1,12 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile *ngFor="let score of scores" [routerLink]="['/score', score.id]">
-        {{score.title}}
-        {{score.composer}}
-    </mat-grid-tile>
-  </mat-grid-list>
+<ul class="cards">
+  <li class="cards__item" *ngFor="let score of scores; let idx = index">
+    <div class="card">
+      <div class="card__image card__image--image{{((idx + 1) % 7)}}"></div>
+      <div class="card__content">
+        <div class="card__title">{{score.title}}</div>
+        <p class="card__text">{{score.composer}}</p>
+        <button class="btn btn--block card__btn" [routerLink]="['/score', score.id]">LUISTER</button>
+      </div>
+    </div>
+  </li>
+</ul>

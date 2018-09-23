@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { registerLocaleData } from '@angular/common';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -53,6 +54,7 @@ import { AppComponent } from './app.component';
 import { RoutingModule } from './routing.module';
 import { GoogleAnalyticsEventsService } from './core/google-analytics-events.service';
 
+import { HomeComponent } from './home/home.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CalendarService } from './calendar/calendar.service';
 import { LoaderComponent } from './loader/loader.component';
@@ -105,6 +107,7 @@ export class MaterialModule { }
   declarations: [
     AppComponent,
     LoaderComponent,
+    HomeComponent,
     ScoreOverviewComponent,
     ScoreDetailComponent,
     CalendarComponent
@@ -129,6 +132,7 @@ export class MaterialModule { }
     useClass: AppHttpInterceptor,
     multi: true
   },
+  { provide: LOCALE_ID, useValue: 'nl_BE' },
     GoogleAnalyticsEventsService,
     CalendarService,
     LoaderService,

@@ -1,11 +1,9 @@
 .example-fill-remaining-space {
-  /* This fills the remaining space, by using flexbox. 
-       Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
 
 .sidenav-content {
-  position:absolute;
+  position: absolute;
   top: 65px;
   left: 0px;
   right: 0px;
@@ -18,24 +16,29 @@
 }
 
 mat-toolbar {
-  background-color: #3e78b2;
+  background-color: #fff;
 }
 
-mat-toolbar > button:hover {
-  background-color: #1439cd;
+.logo {
+  width: 100px;
+  height: 50px;
 }
 
-.title {
-  color: #f5ce33;
-  float: left;
-  clear: left;
-  font-size: large;
+.burger {
+  width: 50px;
+  height: 50px;
 }
 
-.subtitle {
-  color: #f5ce33;
-  float: left;
-  clear: left;
-  padding-left: 15px;
-  font-size: small;
+p {
+  font-family: Lato;
+}
+
+.mat-sidenav-container {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.blank-grow {
+   /*This fills the remaining space, by using flexbox.  
+  Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
 }
