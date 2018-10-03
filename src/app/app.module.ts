@@ -64,6 +64,7 @@ import { ScoreDetailComponent } from './scores/detail/detail.component';
 import { ScoresService } from './scores/scores.service';
 
 import { environment } from '../environments/environment';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   exports: [
@@ -110,7 +111,8 @@ export class MaterialModule { }
     HomeComponent,
     ScoreOverviewComponent,
     ScoreDetailComponent,
-    CalendarComponent
+    CalendarComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
