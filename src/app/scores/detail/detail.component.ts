@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { GoogleAnalyticsEventsService } from '../../core/google-analytics-events.service';
 
 import { environment } from '../../../environments/environment';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 declare const Flat: any;
 
@@ -16,22 +17,16 @@ declare const Flat: any;
 
 export class ScoreDetailComponent implements OnInit {
     coursesObservable: Observable<any[]>;
+    trustedUrl: SafeResourceUrl;
 
-    constructor(private activatedRoute: ActivatedRoute, public googleAnalyticsEventsService: GoogleAnalyticsEventsService) { }
+    // tslint:disable-next-line:max-line-length
+    constructor(private activatedRoute: ActivatedRoute, public googleAnalyticsEventsService: GoogleAnalyticsEventsService, private sanitizer: DomSanitizer) { }
 
     ngOnInit() {
         const id = this.activatedRoute.snapshot.paramMap.get('id');
+        const url = `https://musescore.com/user/21840201/scores/${id}/embed`;
         this.googleAnalyticsEventsService.emitEvent('scoreDetail', 'init', 'scoreId', +id);
-        // this.coursesObservable = this.getCourses('/scores');
-        const container = document.getElementById('embed-container');
-        const embed = new Flat.Embed(container, {
-            score: id,
-            width: '100%',
-            height: '100%',
-            embedParams: {
-              appId: environment.flatAppId,
-              controlsFloating: false
-            }
-          });
+
+        this.trustedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
     }
 }

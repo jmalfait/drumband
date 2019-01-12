@@ -18,4 +18,5 @@ export const environment = {
   flatUri: 'https://api.flat.io/v2',
   flatAppId: '5a74505db8bdfd7777ec4219',
   flatUser: 'jens_malfait',
+  assetUrl: 'http://drumband-pvsj.be/assets'
 };

@@ -12,15 +12,16 @@ export class ScoresService {
     private url: string;
 
     constructor(private http: HttpClient) {
-        this.url = `${environment.flatUri}/users/${environment.flatUser}/scores`;
+        const base_url = window.location.origin;
+        this.url = `${base_url}/assets/data/scores.json`;
     }
 
 
     getAllScores(): Observable<Score[]> {
         return this.http.get(this.url).map((res: any) => {
             const scoreArray = new Array<Score>();
-            for (const score of res) {
-                scoreArray.push(new Score(score.id, score.title, score.composer));
+            for (const score of res.scores) {
+                scoreArray.push(new Score(score.id, score.title, score.url));
             }
             return scoreArray;
         });
