@@ -29,7 +29,7 @@
     "angularfire2": "^5.0.0-rc.6",
     "core-js": "^2.4.1",
     "firebase": "^4.9.0",
-    "flat-embed": "0.9.0",
+    "flat-embed": "0.11.0",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
